@@ -1,0 +1,43 @@
+{
+  "suite": "Future AI Microbench Suite",
+  "version": "0.3.2",
+  "SVK": {
+    "enabled": true,
+    "vector_length": 2048,
+    "nnz": 128,
+    "iterations": 1000
+  },
+  "MGT": {
+    "enabled": true,
+    "nodes": 512,
+    "edges": 2048,
+    "iterations": 64
+  },
+  "MAK": {
+    "enabled": true,
+    "tokens": 8,
+    "dim": 32,
+    "iterations": 256
+  },
+  "MRK": {
+    "enabled": true,
+    "db_size": 256,
+    "dim": 32,
+    "topk": 3,
+    "iterations": 256
+  },
+  "PCK": {
+    "enabled": true,
+    "depth": 128,
+    "iterations": 256
+  },
+  "MBW": {
+    "enabled": true,
+    "size_bytes": 262144,
+    "iterations": 32
+  },
+  "MAL": {
+    "enabled": true,
+    "iterations": 64
+  }
+}
