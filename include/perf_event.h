@@ -1,6 +1,8 @@
 #ifndef FAMBS_PERF_EVENT_H
 #define FAMBS_PERF_EVENT_H
 
+#include <stdint.h>
+
 /* Simple instrumentation hooks for microarchitectural event tracing.
  *
  * By default these are no-ops. Integrators can redefine the macros
