@@ -6,7 +6,7 @@ OBJDUMP = riscv64-unknown-elf-objdump
 OBJCOPY = riscv64-unknown-elf-objcopy
 
 # Flags
-CFLAGS = -march=rv64gc -mabi=lp64d -O2 -nostdlib -nostartfiles -ffreestanding
+CFLAGS = -march=rv64gc -mabi=lp64d -O2 -nostdlib -nostartfiles -ffreestanding -I../include
 LDFLAGS = -T linker.ld -nostdlib
 
 # Paths
@@ -15,12 +15,13 @@ BUILD_DIR = .
 
 # Source files
 SRCS = $(SRC_DIR)/harness.c \
-       $(SRC_DIR)/mak_micro_attention.c \
-       $(SRC_DIR)/mal_micro_autonomy.c \
-       $(SRC_DIR)/mbw_bandwidth.c \
+       $(SRC_DIR)/svk_sparse_vec.c \
        $(SRC_DIR)/mgt_micro_graph.c \
+       $(SRC_DIR)/mak_micro_attention.c \
        $(SRC_DIR)/mrk_micro_retrieval.c \
-       $(SRC_DIR)/pck_pointer_chase.c
+       $(SRC_DIR)/pck_pointer_chase.c \
+       $(SRC_DIR)/mbw_bandwidth.c \
+       $(SRC_DIR)/mal_micro_autonomy.c
 
 # Object files
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))

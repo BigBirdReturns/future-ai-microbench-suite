@@ -1,4 +1,4 @@
-// Future AI Microbench Suite v0.3.1
+// Future AI Microbench Suite v0.3.2
 // Common definitions and JSON printing utilities.
 
 #ifndef BENCH_COMMON_H
@@ -24,13 +24,12 @@ typedef struct {
 
 static inline void print_result_json(const bench_result_t *r) {
     if (!r || !r->bench) return;
-    printf("{"bench":"%s","cycles":%llu,"iters":%u,"notes":"%s"}\n",
+    printf("{\"bench\":\"%s\",\"cycles\":%llu,\"iters\":%u,\"notes\":\"%s\"}\n",
            r->bench,
            (unsigned long long)r->cycles,
            r->iterations,
            r->notes ? r->notes : "");
 }
-
 
 // Self check helpers
 static inline void bench_check_f(const char *bench, float actual, float expected, float tol) {
